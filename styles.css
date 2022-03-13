@@ -1,0 +1,230 @@
+*{
+    margin:0;
+    box-sizing: border-box;
+    
+}
+.searhtoggle{
+    display:flex;
+    margin-top: 25px;
+}
+#searcha{
+    background-color: #F8F8FF;
+    border: 3px solid #F8F8FF;
+    border-radius: 100px;
+    font-weight:bold;
+    margin: 25px;
+    
+
+}
+body{
+    font-family: Old style serif;
+    padding:70px 20px 0;
+}
+
+.header{
+    background: linear-gradient(200deg,#000000,#192041,#BE14F9);
+       /* border: 3px solid black;*/
+    height: 70px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    font-family: Old style serif;
+    
+     
+    
+}
+.nav{
+    display: flex;
+    justify-content:space-between;
+    
+    max-width:1400px;/*ajuste de error del hancho max*/
+    margin:0 auto;
+    width: max-content;
+}
+
+.nav-link{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    
+}
+
+.logo{
+    font-size: 30px;
+    font-weight:bold;
+    padding: 0 40px;
+    line-height: 65px;
+    border-radius: 2px solid white;
+    
+    margin-left: -190px;
+    
+}
+
+.nav-menu{
+    display: flex;
+    margin: right 40px;
+    list-style: none;
+}
+
+.nav-menu-item{
+    font-size: 18px;
+    margin:0 10px;
+    line-height: 65px;
+    text-transform: uppercase;
+    width: max-content;/*para que no me corte las palabras por tamaño del cel*/
+
+}
+.nav-menu-link{  /*ajuste para background del efecto sombreado*/
+    padding: 8px 12px; 
+    border-radius: 3px;
+}
+
+.nav-menu-link:hover,
+.nav-menu-link_active{
+    background-color: rgb(013, 110, 253);/*Efecto sombreado al pasar el maus al menu */
+    border: 2px solid #ffffff;
+    margin: 10px 10px;
+    color: rgb(255, 255, 255);
+    transition: 0.5s;
+    border-radius: 100px;
+    
+    
+}
+
+.nav-toggle{
+    height: 54px;
+    color:rgb(0, 0, 0);
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding:0 20px ; /* Acomoda el toogle */
+    line-height: 60px;
+    cursor:pointer; /*deja precionado */
+    
+    display: none;
+
+}
+input[type="text1"]{
+    padding: 0 20px;
+
+}
+    
+
+@media(max-width: 1400px){
+    
+    .logo{
+        font-size: 30px;
+        font-weight:bold;
+        padding: 0 40px;
+        line-height: 65px;
+        border-radius: 2px solid white;
+        
+        margin-left: -30px;
+        
+    }
+
+
+}
+@media(min-width: 768px){
+    #searcha{
+    background-color: none;
+    border: none;
+    border-radius: none;
+    font-weight:none;
+    margin: none;
+    }
+    
+
+
+}
+
+@media(max-width: 768px){ /*para celulares cuando la resoln afecte*/
+   
+    input[type="text1"]{
+        padding: 0 10px;
+        font-family: Old style serif;
+    
+    }    
+
+    .searhtoggle{
+        display:flex;
+        margin-top: 0px;
+    }
+    #searcha{
+        background-color: #F8F8FF;
+        border: 3px solid #F8F8FF;
+        border-radius: 100px;
+        margin-bottom: 20px;
+    
+    }
+    body{
+        padding-top:70px;
+    }
+    
+    .header{
+        height: 60px;
+        background: #BE14F9;
+    }
+    
+    .logo{
+        font-family: Old style serif;
+        font-size: 25px;
+        padding: 0 25px;
+        line-height: 55px;
+        margin-left: 0px;
+        
+    }
+    .nav{
+        display: flex;
+        
+        
+        max-width: 992px;/*ajuste de error del hancho max*/
+        
+    }
+    .nav-menu{
+        flex-direction: column;
+        align-items: center;
+        margin: 0px;
+        background: linear-gradient(0deg,#000000,#192041,#BE14F9);
+        position: fixed;
+        top: 60px; /*alto del elemento*/
+        width: 100%;
+        padding: 20px 0;
+       
+        height: calc(100% - 60px);  /*para cuando el movil tenga minimisada la pantalla poder hacer scrolling*/
+        overflow-y: auto;
+
+        left: 100%;
+        transition: left 0.3s;
+
+        
+
+        
+    }
+    
+    .nav-menu-item{
+        line-height: 70px;
+    }
+ 
+    .nav-menu-link:hover,
+    .nav-menu-link_active{
+        background: none;
+        color: #BE14F9;
+        transition: 0.5s;
+    }
+    
+    .nav-toggle{
+        display:flex;
+        margin-right: -115px;
+        
+    }
+    .nav-menu_visible{
+    left: 0;
+
+    }
+
+    .nav-toggle:focus:not(:focus-visible){
+    outline:none;
+    }
+}    

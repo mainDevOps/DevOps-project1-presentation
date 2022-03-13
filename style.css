@@ -1,0 +1,426 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fredoka', sans-serif;
+}
+
+body{
+    background: rgb(236,131,194);
+    background: linear-gradient(90deg, rgba(236,131,194,1) 0%, rgba(210,79,214,1) 10%, rgba(180,19,236,1) 47%, rgba(150,29,236,1) 72%, rgba(114,41,237,1) 84%, rgba(76,54,237,1) 93%, rgba(22,72,237,1) 100%);
+}
+
+.container-nav h2,
+.container-footer h2{
+    height: auto;
+    margin: 0;
+    background-color: #f8f8ff;
+    color: #212529;
+    text-align: center;
+}
+
+.container-cards-presentation{
+    width: 100%;
+    height: 500px;
+    margin: 30px auto 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 10px;
+}
+
+input[type="radio"]{
+    display: none;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    max-width: 800px;
+    max-height: 600px;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.card{
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    cursor: pointer;
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.cards img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#item-2:checked ~ .cards #selector-1,
+#item-3:checked ~ .cards #selector-2,
+#item-1:checked ~ .cards #selector-3{
+    transform: translateX(-40%) scale(0.8);
+    opacity: 0.6;
+    z-index: 0;
+}
+
+#item-3:checked ~ .cards #selector-1,
+#item-1:checked ~ .cards #selector-2,
+#item-2:checked ~ .cards #selector-3{
+    transform: translateX(40%) scale(0.8);
+    opacity: 0.6;
+    z-index: 0;
+}
+
+#item-1:checked ~ .cards #selector-1,
+#item-2:checked ~ .cards #selector-2,
+#item-3:checked ~ .cards #selector-3{
+    transform: translateX(0) scale(1);
+    z-index: 1;
+}
+
+/*-------------------------------*/
+
+#item-2:checked ~ .descriptions #selector-1,
+#item-3:checked ~ .descriptions #selector-2,
+#item-1:checked ~ .descriptions #selector-3{
+    z-index: 0;
+    display: none;
+}
+
+#item-3:checked ~ .descriptions #selector-1,
+#item-1:checked ~ .descriptions #selector-2,
+#item-2:checked ~ .descriptions #selector-3{
+    z-index: 0;
+    display: none;
+}
+
+#item-1:checked ~ .descriptions #selector-1,
+#item-2:checked ~ .descriptions #selector-2,
+#item-3:checked ~ .descriptions #selector-3{
+    z-index: 1;
+}
+
+.card-content{
+    margin-top: 250px;
+    width: 90%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.container-boxprojects{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background: #f8f8ff;
+    width: 88%;
+    margin: 250px auto 50px;
+    border-radius: 20px;
+
+}
+
+.container-boxprojects h2{
+    margin: 10px auto 20px;
+    color: #212529;
+    text-align: center;
+}
+
+.container-projects{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-project img{
+    display: block;
+    padding: 20px 10px;
+    width: 90%;
+    height: 300px;
+    margin: auto;
+}
+
+.card-project{
+    width: 300px;
+    height: auto;
+    margin: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 3px 3px #192041;
+}
+
+@media (min-width: 992px){
+    .card-project img{
+        display: block;
+        padding: 20px 10px;
+        width: 90%;
+        height: 200px;
+        margin: auto;
+    }
+
+    .card-project{
+        width: 200px;
+        height: auto;
+        margin: 10px;
+        border: 1px solid black;
+        border-radius: 10px;
+        box-shadow: 2px 2px #192041;
+    }
+}
+
+@media (max-width: 709px){
+    .container-boxprojects{
+        margin-top: 300px;
+    }
+
+    .card-content{
+        border-radius: 10px;
+    }
+}
+
+@media (max-width: 526px){
+    .container-boxprojects{
+        margin-top: 330px;
+    }
+
+    .card-content{
+        border-radius: 10px;
+    }
+}
+.searhtoggle{
+    display:flex;
+    margin-top: 25px;
+}
+#searcha{
+    background-color: #F8F8FF;
+    border: 3px solid #F8F8FF;
+    border-radius: 100px;
+    font-weight:bold;
+    margin: 25px;
+    
+
+}
+body{
+    font-family: Old style serif;
+    padding:70px 20px 0;
+}
+
+.header{
+    background: linear-gradient(200deg,#000000,#192041,#BE14F9);
+       /* border: 3px solid black;*/
+    height: 70px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    font-family: Old style serif;
+    
+     
+    
+}
+.nav{
+    display: flex;
+    justify-content:space-between;
+    
+    max-width:1400px;/*ajuste de error del hancho max*/
+    margin:0 auto;
+    width: max-content;
+}
+
+.nav-link{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    
+}
+
+.logo{
+    font-size: 30px;
+    font-weight:bold;
+    padding: 0 40px;
+    line-height: 65px;
+    border-radius: 2px solid white;
+    
+    margin-left: -190px;
+    
+}
+
+.nav-menu{
+    display: flex;
+    margin: right 40px;
+    list-style: none;
+}
+
+.nav-menu-item{
+    font-size: 18px;
+    margin:0 10px;
+    line-height: 65px;
+    text-transform: uppercase;
+    width: max-content;/*para que no me corte las palabras por tamaño del cel*/
+
+}
+.nav-menu-link{  /*ajuste para background del efecto sombreado*/
+    padding: 8px 12px; 
+    border-radius: 3px;
+}
+
+.nav-menu-link:hover,
+.nav-menu-link_active{
+    background-color: rgb(013, 110, 253);/*Efecto sombreado al pasar el maus al menu */
+    border: 2px solid #ffffff;
+    margin: 10px 10px;
+    color: rgb(255, 255, 255);
+    transition: 0.5s;
+    border-radius: 100px;
+    
+    
+}
+
+.nav-toggle{
+    height: 54px;
+    color:rgb(0, 0, 0);
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding:0 20px ; /* Acomoda el toogle */
+    line-height: 60px;
+    cursor:pointer; /*deja precionado */
+    
+    display: none;
+
+}
+input[type="text1"]{
+    padding: 0 20px;
+
+}
+    
+
+@media(max-width: 1400px){
+    
+    .logo{
+        font-size: 30px;
+        font-weight:bold;
+        padding: 0 40px;
+        line-height: 65px;
+        border-radius: 2px solid white;
+        
+        margin-left: -30px;
+        
+    }
+
+
+}
+@media(min-width: 768px){
+    #searcha{
+    background-color: none;
+    border: none;
+    border-radius: none;
+    font-weight:none;
+    margin: none;
+    }
+    
+
+
+}
+
+@media(max-width: 768px){ /*para celulares cuando la resoln afecte*/
+   
+    input[type="text1"]{
+        padding: 0 10px;
+        font-family: Old style serif;
+    
+    }    
+
+    .searhtoggle{
+        display:flex;
+        margin-top: 0px;
+    }
+    #searcha{
+        background-color: #F8F8FF;
+        border: 3px solid #F8F8FF;
+        border-radius: 100px;
+        margin-bottom: 20px;
+    
+    }
+    body{
+        padding-top:70px;
+    }
+    
+    .header{
+        height: 60px;
+        background: #BE14F9;
+    }
+    
+    .logo{
+        font-family: Old style serif;
+        font-size: 25px;
+        padding: 0 25px;
+        line-height: 55px;
+        margin-left: 0px;
+        
+    }
+    .nav{
+        display: flex;
+        
+        
+        max-width: 992px;/*ajuste de error del hancho max*/
+        
+    }
+    .nav-menu{
+        flex-direction: column;
+        align-items: center;
+        margin: 0px;
+        background: linear-gradient(0deg,#000000,#192041,#BE14F9);
+        position: fixed;
+        top: 60px; /*alto del elemento*/
+        width: 100%;
+        padding: 20px 0;
+       
+        height: calc(100% - 60px);  /*para cuando el movil tenga minimisada la pantalla poder hacer scrolling*/
+        overflow-y: auto;
+
+        left: 100%;
+        transition: left 0.3s;
+
+        
+
+        
+    }
+    
+    .nav-menu-item{
+        line-height: 70px;
+    }
+ 
+    .nav-menu-link:hover,
+    .nav-menu-link_active{
+        background: none;
+        color: #BE14F9;
+        transition: 0.5s;
+    }
+    
+    .nav-toggle{
+        display:flex;
+        margin-right: -115px;
+        
+    }
+    .nav-menu_visible{
+    left: 0;
+
+    }
+
+    .nav-toggle:focus:not(:focus-visible){
+    outline:none;
+    }
+}    
