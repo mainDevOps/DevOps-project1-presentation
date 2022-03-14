@@ -451,3 +451,9 @@ input[type="text1"]{
         display: none;
     }
 }
+
+@media (max-width: 768px){
+    .nav-item-3, .nav-item-5{
+        display: block;
+    }
+}
