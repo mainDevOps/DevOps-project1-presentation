@@ -22,7 +22,7 @@ body{
 .container-cards-presentation{
     width: 100%;
     height: 500px;
-    margin: 30px auto 200px;
+    margin: 0px auto 200px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -114,7 +114,7 @@ input[type="radio"]{
 }
 
 .card-content{
-    margin-top: 250px;
+    margin-top: 310px;
     width: 90%;
     height: auto;
     border-radius: 10px;
@@ -126,7 +126,7 @@ input[type="radio"]{
     padding: 20px;
     background: #f8f8ff;
     width: 88%;
-    margin: 250px auto 50px;
+    margin: 310px auto 50px;
     border-radius: 20px;
 
 }
@@ -187,12 +187,13 @@ input[type="radio"]{
 
     .card-content{
         border-radius: 10px;
+        margin-top: 250px;
     }
 }
 
 @media (max-width: 526px){
     .container-boxprojects{
-        margin-top: 330px;
+        margin-top: 320px;
     }
 
     .card-content{
@@ -209,12 +210,6 @@ input[type="radio"]{
     border-radius: 100px;
     font-weight:bold;
     margin: 25px;
-    
-
-}
-body{
-    font-family: Old style serif;
-    padding:70px 20px 0;
 }
 
 .header{
@@ -225,12 +220,9 @@ body{
     width: 100%;
     top: 0;
     left: 0;
-    z-index: 1;
-    font-family: Old style serif;
-    
-     
-    
+    z-index: 1;   
 }
+
 .nav{
     display: flex;
     justify-content:space-between;
@@ -289,7 +281,7 @@ body{
 }
 
 .nav-toggle{
-    height: 54px;
+    height: auto;
     color:rgb(0, 0, 0);
     background: none;
     border: none;
@@ -297,10 +289,22 @@ body{
     padding:0 20px ; /* Acomoda el toogle */
     line-height: 60px;
     cursor:pointer; /*deja precionado */
-    
-    display: none;
-
 }
+
+button .bi-list{
+    display: block;
+    margin: auto;
+}
+
+button .bi-list svg{
+    width: 40px;
+    height: 40px;
+}
+
+.nav-menu::-webkit-scrollbar {
+    display: none;
+    }
+
 input[type="text1"]{
     padding: 0 20px;
 
@@ -359,8 +363,11 @@ input[type="text1"]{
     }
     
     .header{
-        height: 60px;
+        height: 70px;
         background: #BE14F9;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
     }
     
     .logo{
@@ -373,8 +380,6 @@ input[type="text1"]{
     }
     .nav{
         display: flex;
-        
-        
         max-width: 992px;/*ajuste de error del hancho max*/
         
     }
@@ -423,4 +428,26 @@ input[type="text1"]{
     .nav-toggle:focus:not(:focus-visible){
     outline:none;
     }
-}    
+} 
+
+@media (min-width: 769px){
+    .cards{
+        margin-top: 150px;
+    }
+
+    .nav-toggle{
+        display: none;
+    }
+}
+
+@media (max-width: 1100px){
+    .nav-item-3{
+        display: none;
+    }
+}
+
+@media (max-width: 1000px){
+    .nav-item-5{
+        display: none;
+    }
+}
