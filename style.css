@@ -457,3 +457,9 @@ input[type="text1"]{
         display: block;
     }
 }
+
+/* FOOTER */
+
+.logo-footer{
+    width: 20%;
+}
