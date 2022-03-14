@@ -461,6 +461,23 @@ input[type="text1"]{
 /* FOOTER */
 
 .logo-footer{
-    width: 20%;
+    width: 30%;
     
+}
+
+.footer-color{
+    background: linear-gradient(200deg,#000000,#192041,#BE14F9);
+       /* border: 3px solid black;*/
+}
+
+.footer-a{
+    text-decoration: none;
+    color:white;
+    font-size: large;
+}
+
+.footer-border{
+    border-top: 1px solid white;
+    border-top-width: 1px;
+
 }
