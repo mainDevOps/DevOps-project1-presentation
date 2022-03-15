@@ -458,6 +458,30 @@ input[type="text1"]{
     }
 }
 
+@media (max-width: 768px){
+    .nav-item-3, .nav-item-5{
+        display: block;
+    }
+}
+
+@media (max-width: 464px){
+    .container-boxprojects{
+        margin-top: 350px;
+    }
+}
+
+@media (max-width: 395px){
+    .container-boxprojects{
+        margin-top: 390px;
+    }
+}
+
+@media (max-width: 395px){
+    .container-boxprojects{
+        margin-top: 410px;
+    }
+}
+
 /* FOOTER */
 
 .logo-footer{
