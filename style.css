@@ -485,9 +485,14 @@ input[type="text1"]{
 /* FOOTER */
 
 .logo-footer{
+<<<<<<< HEAD
     width: 54px;
     height: 54px;
     
+=======
+    width: 150px;
+    height: auto;
+>>>>>>> 77d7eb0e443618f621442e9518b7b962c1555615
 }
 
 .footer-color{
